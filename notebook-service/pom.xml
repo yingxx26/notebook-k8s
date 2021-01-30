@@ -106,15 +106,15 @@
     </build>
 
     <distributionManagement>
-    <repository>
-        <id>central</id>
-        <name>releases</name>
-        <url>http://localhost:8083/artifactory/libs-release</url>
-    </repository>
-    <snapshotRepository>
-        <id>central-snapshot</id>
-        <name>snapshot</name>
-        <url>http://localhost:8083/artifactory/libs-snapshot-local</url>
-    </snapshotRepository>
+        <repository>
+            <id>central</id>
+            <name>DESKTOP-JO6P9AD-releases</name>
+            <url>http://localhost:8081/artifactory/libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>DESKTOP-JO6P9AD-snapshots</name>
+            <url>http://localhost:8081/artifactory/libs-release</url>
+        </snapshotRepository>
     </distributionManagement>
 </project>
