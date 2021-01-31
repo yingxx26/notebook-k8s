@@ -24,12 +24,12 @@
 		<repository>
 			<id>central</id>
 			<name>DESKTOP-JO6P9AD-releases</name>
-			<url>http://localhost:8081/artifactory/libs-release</url>
+			<url>http://192.168.181.1:8081/artifactory/libs-release</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
 			<name>DESKTOP-JO6P9AD-snapshots</name>
-			<url>http://localhost:8081/artifactory/libs-release</url>
+			<url>http://192.168.181.1:8081/artifactory/libs-release</url>
 		</snapshotRepository>
 	</distributionManagement>
 
