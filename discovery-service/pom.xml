@@ -55,4 +55,17 @@
             </plugin>
         </plugins>
     </build>
+
+    <distributionManagement>
+        <repository>
+            <id>central</id>
+            <name>bab52be6cade-releases</name>
+            <url>http://192.168.181.140:8182/artifactory/libs-release</url>
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>bab52be6cade-snapshots</name>
+            <url>http://192.168.181.140:8182/artifactory/libs-release</url>
+        </snapshotRepository>
+    </distributionManagement>
 </project>
