@@ -1,0 +1,15 @@
+- hosts: all
+  vars:
+    http_port: 80
+    max_clients: 200
+  remote_user: root
+  tasks:
+    - name: Copy jar files to prod
+      copy: src=notebook-service-1.0.jar dest=/usr/local/src/tmpcandelete
+          owner=root group=root mode=0644
+    - name: start jar
+      shell:  nohup java -jar /usr/local/src/tmpcandelete/notebook-service-1.0.jar  &
+    - name: sleep 120 s
+      shell: sleep 120
+    - name: shut down
+      shell: kill -9 $(lsof -t -i:1111)
