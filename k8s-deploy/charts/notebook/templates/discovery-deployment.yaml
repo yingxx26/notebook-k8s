@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: discovery-service
-          image: art.local:8081/docker/notebook-k8s/discovery-service
+          image: art.local:8281/docker/notebook-k8s/discovery-service
           ports:
             - containerPort: 8761
               protocol: TCP

@@ -25,8 +25,8 @@ node {
 
        stage('Docker build'){
             sh '''
-            docker build -t art.local:8081/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER .
-            docker push art.local:8081/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
+            docker build -t art.local:8281/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER .
+            docker push art.local:8281/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
             '''
         }
 
@@ -65,8 +65,8 @@ node {
                                'http://localhost:8082/artifactory/generic-release-local/notebook-k8s/notebook-service/notebook-service-1.0.jar;Test.UnitTestPassed=true;Test.CodeScanningPassed=true;Test.IntegrationTestPassed=true;Released=true'
 
 
-                docker tag art.local:8081/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER art.local:8081/docker-release-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
-                docker push art.local:8081/docker-release-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
+                docker tag art.local:8281/docker-testing-local/notebook-k8s/notebook-service:\$BUILD_NUMBER art.local:8281/docker-release-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
+                docker push art.local:8281/docker-release-local/notebook-k8s/notebook-service:\$BUILD_NUMBER
 
 
                
