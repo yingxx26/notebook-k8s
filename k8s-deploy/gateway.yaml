@@ -29,7 +29,7 @@ spec:
     spec:
       containers:
       - name: gateway-service
-        image: art.local:8081/docker/notebook-k8s/gateway-service:latest
+        image: art.local:8281/docker/notebook-k8s/gateway-service:latest
         env:
           - name: NOTEBOOK_SERVICE
             value: "192.168.99.100"

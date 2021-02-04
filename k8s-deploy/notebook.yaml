@@ -32,7 +32,7 @@ spec:
     spec:
       containers:
         - name: notebook-service
-          image: art.local:8081/docker/notebook-k8s/notebook-service:latest
+          image: art.local:8281/docker/notebook-k8s/notebook-service:latest
           env:
             - name: DISCOVERY_URL
               value: "http://eureka-server:8761"

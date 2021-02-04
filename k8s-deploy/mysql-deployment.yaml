@@ -55,7 +55,7 @@ spec:
         run: mysql
     spec:
       containers:
-      - image: art.local:8081/docker/mysql/mysql-server:5.6
+      - image: art.local:8281/docker/mysql/mysql-server:5.6
         name: mysql
         env:
           # Use secret in real usage
