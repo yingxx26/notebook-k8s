@@ -15,31 +15,25 @@
             case $yn in
                 [Yy]* )
                     kubectl delete -f k8s-deploy/discovery.yaml -n prod
-                    kubectl delete -f k8s-deploy/gateway.yaml -n prod
                     kubectl delete -f k8s-deploy/notebook.yaml -n prod
 
                     kubectl create -f k8s-deploy/discovery.yaml -n prod
                     kubectl create -f k8s-deploy/notebook.yaml -n prod
-                    kubectl create -f k8s-deploy/gateway.yaml -n prod
                  break;;
                 [Nn]* )
                     kubectl delete -f k8s-deploy/discovery.yaml -n dev
-                    kubectl delete -f k8s-deploy/gateway.yaml -n dev
                     kubectl delete -f k8s-deploy/notebook.yaml -n dev
 
                     kubectl create -f k8s-deploy/discovery.yaml -n dev
                     kubectl create -f k8s-deploy/notebook.yaml -n dev
-                    kubectl create -f k8s-deploy/gateway.yaml -n dev
                 exit;;
                 * ) echo "Please answer yes or no.";;
             esac
             kubectl delete -f k8s-deploy/discovery.yaml
-            kubectl delete -f k8s-deploy/gateway.yaml
             kubectl delete -f k8s-deploy/notebook.yaml
 
             kubectl create -f k8s-deploy/discovery.yaml
             kubectl create -f k8s-deploy/notebook.yaml
-            kubectl create -f k8s-deploy/gateway.yaml
         exit;;
         * ) echo "Please answer yes or no.";;
     esac

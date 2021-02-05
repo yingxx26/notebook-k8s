@@ -14,7 +14,7 @@ spec:
     run: eureka-server
   type: NodePort
 ---
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: eureka-server
@@ -22,6 +22,9 @@ metadata:
     run: eureka-server
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      run: eureka-server
   template:
     metadata:
       labels:
